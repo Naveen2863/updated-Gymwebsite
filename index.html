@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Gym Name</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f6f1ee;
+      color: #4f4a45; /* Updated text color for better contrast */
+    }
+
+    nav {
+      background-color: #4f4a45;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    hero-section {
+      text-align: center;
+      padding: 100px 20px;
+      color: #fff; /* Updated text color for better contrast */
+      background: url('https://via.placeholder.com/1600x800/4F4A45/ED7D31?text=Gym%20Image') no-repeat center center/cover;
+    }
+
+    hero-section button {
+      background-color: #ed7d31;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    gym-facilities-section {
+      text-align: center;
+      padding: 50px;
+      background-color: #f6f1ee;
+    }
+
+    facility-images {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .facility-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin: 20px;
+    }
+
+    price-plans-section {
+      text-align: center;
+      padding: 50px;
+      background-color: #f6f1ee;
+    }
+
+    .plan-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .plan {
+      background-color: #f3deba;
+      border: 1px solid #4f4a45;
+      padding: 20px;
+      margin: 20px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .plan:hover {
+      transform: scale(1.4);
+    }
+
+    .plan h3,
+    .plan p {
+      color: #4f4a45;
+    }
+
+    .contact-section {
+      text-align: center;
+      padding: 50px;
+      background-color: #4f4a45;
+      color: #fff;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #ed7d31;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <hero-section id="hero">
+    <h1>Welcome to Your Gym Name</h1>
+    <p>Get fit, stay healthy</p>
+    <button onclick="scrollToSection('pricing')">Join Now</button>
+  </hero-section>
+
+  <gym-facilities-section id="facilities">
+    <h2>Our Facilities</h2>
+    <div class="facility-images">
+      <img class="facility-image" src="https://via.placeholder.com/400x300/4F4A45/ED7D31?text=Weightlifting" alt="Weightlifting Area">
+      <img class="facility-image" src="https://via.placeholder.com/400x300/4F4A45/ED7D31?text=Cardio" alt="Cardio Area">
+    </div>
+    <p>Explore our state-of-the-art facilities, including a well-equipped weightlifting area and a dedicated cardio zone.</p>
+  </gym-facilities-section>
+
+  <price-plans-section id="pricing">
+    <h2>Choose Your Plan</h2>
+    <div class="plan-container">
+      <div class="plan">
+        <h3>Basic Plan</h3>
+        <p>Access to basic facilities</p>
+        <p>$19.99/month</p>
+        <button onclick="scrollToSection('contact')">Sign Up</button>
+      </div>
+      <div class="plan">
+        <h3>Standard Plan</h3>
+        <p>Access to all facilities</p>
+        <p>$29.99/month</p>
+        <button onclick="scrollToSection('contact')">Sign Up</button>
+      </div>
+      <div class="plan">
+        <h3>Premium Plan</h3>
+        <p>Access to all facilities + personal trainer</p>
+        <p>$49.99/month</p>
+        <button onclick="scrollToSection('contact')">Sign Up</button>
+      </div>
+    </div>
+  </price-plans-section>
+
+  <div id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+
+</html>
